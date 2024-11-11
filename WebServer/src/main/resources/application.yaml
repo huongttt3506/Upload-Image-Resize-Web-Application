@@ -1,0 +1,18 @@
+spring:
+  mvc:
+    static-path-pattern: /static/**
+  web:
+    resources:
+      static-locations: file:media/,classpath:/static
+  datasource:
+    url: jdbc:sqlite:db.sqlite
+    driver-class-name: org.sqlite.JDBC
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    database-platform: org.hibernate.community.dialect.SQLiteDialect
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
